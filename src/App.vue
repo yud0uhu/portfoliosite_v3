@@ -1,10 +1,9 @@
 <template>
   <v-app>
     <v-container>
-      <!-- スタイルは本記事のメインではないので雑に設定しています。この辺りもお好みで！ -->
       <v-app-bar color="#FFFFFF" flat max-height="100" class="mb-5">
         <v-toolbar-title>
-          <h1><router-link to="/" class="logo">ブログ！</router-link></h1>
+          <h1><router-link to="/" class="logo">建設予定地</router-link></h1>
         </v-toolbar-title>
 
         <v-spacer></v-spacer>
