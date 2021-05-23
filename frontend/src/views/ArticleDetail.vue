@@ -1,6 +1,9 @@
 <template>
   <v-card flat>
-    <v-img height="400" src="frontend/src/assets/bg.png"></v-img>
+    <v-img
+      height="400"
+      src="https://github.com/yud0uhu/vue-blog/blob/master/frontend/src/assets/bg.png?raw=true"
+    ></v-img>
     <!-- <v-img height="400" :src="image.url"></v-img> -->
 
     <v-card-title>{{ article.title }}</v-card-title>
