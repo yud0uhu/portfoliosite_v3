@@ -1,6 +1,7 @@
 <template>
   <v-card flat>
-    <v-img height="400" :src="article.image.url"></v-img>
+    <v-img height="400" src="frontend/src/assets/bg.png"></v-img>
+    <!-- <v-img height="400" :src="image.url"></v-img> -->
 
     <v-card-title>{{ article.title }}</v-card-title>
 
