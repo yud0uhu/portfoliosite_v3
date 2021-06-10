@@ -9,13 +9,26 @@
         <v-spacer></v-spacer>
 
         <div id="nav">
-          <router-link to="/"><v-icon>mdi-note</v-icon></router-link> |
-          <router-link to="/about"><v-icon>mdi-home</v-icon></router-link> |
-          <a href="https://twitter.com/denham95173179"
-            ><v-icon>mdi-twitter</v-icon></a
-          >
-          |
-          <a href="https://github.com/yud0uhu"><v-icon>mdi-github</v-icon></a>
+          <v-tabs>
+            <v-tab>
+              <router-link to="/"><v-icon>mdi-note</v-icon></router-link>
+            </v-tab>
+            <v-tab
+              ><router-link to="/about"
+                ><v-icon>mdi-home</v-icon></router-link
+              ></v-tab
+            >
+            <v-tab
+              ><a href="https://twitter.com/denham95173179"
+                ><v-icon>mdi-twitter</v-icon></a
+              >
+            </v-tab>
+            <v-tab
+              ><a href="https://github.com/yud0uhu"
+                ><v-icon>mdi-github</v-icon></a
+              ></v-tab
+            >
+          </v-tabs>
         </div>
       </v-app-bar>
 

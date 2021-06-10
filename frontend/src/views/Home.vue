@@ -1,31 +1,44 @@
 <template>
   <div>
-    <v-row>
-      <v-col v-for="article in articles" :key="article.id">
-        <v-card class="mx-auto" width="300" height="330">
-          <v-img
-            class="white--text align-end"
-            height="200px"
-            :src="article.image.url"
-          >
-            <v-card-title>{{ article.title }}</v-card-title>
-          </v-img>
-
-          <v-card-text class="text--primary">
-            <div class="summary">{{ article.summary }}</div>
-          </v-card-text>
-
-          <v-card-actions>
-            <!-- 詳細画面で記事を取得できるように、記事のidをパラメーターとして渡す -->
-            <router-link
-              :to="{ name: 'article-detail', params: { id: article.id } }"
+    <v-container class="pa-4 text-center">
+      <v-row>
+        <v-col v-for="article in articles" :key="article.id">
+          <v-hover v-slot="{ hover }">
+            <v-card
+              :elevation="hover ? 12 : 2"
+              :class="{ 'on-hover': hover }"
+              width="300"
+              height="500"
             >
-              <v-btn color="orange" text>More</v-btn>
-            </router-link>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
+              <v-img
+                class="white--text align-end"
+                height="300px"
+                width="330px"
+                :src="article.image.url"
+              >
+                <v-card-title>{{ article.title }}</v-card-title>
+              </v-img>
+
+              <v-card-text class="text--primary">
+                <div class="text-h6 font-weight-regular grey--text">
+                  {{ article.updata }}
+                </div>
+                <div class="summary">{{ article.summary }}</div>
+              </v-card-text>
+
+              <v-card-actions>
+                <!-- 詳細画面で記事を取得できるように、記事のidをパラメーターとして渡す -->
+                <router-link
+                  :to="{ name: 'article-detail', params: { id: article.id } }"
+                >
+                  <v-btn color="orange" text>More</v-btn>
+                </router-link>
+              </v-card-actions>
+            </v-card>
+          </v-hover>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -36,6 +49,7 @@ export default {
 
   data: () => ({
     articles: [],
+    transparent: "rgba(255, 255, 255, 0)",
   }),
 
   async mounted() {
@@ -56,5 +70,16 @@ export default {
  */
 .summary {
   white-space: pre-wrap;
+}
+.v-card {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.v-card:not(.on-hover) {
+  opacity: 0.6;
+}
+
+.show-btns {
+  color: rgba(255, 255, 255, 1) !important;
 }
 </style>

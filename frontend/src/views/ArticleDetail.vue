@@ -1,16 +1,30 @@
 <template>
   <v-card flat>
-    <v-img
-      height="400"
+    <v-parallax
+      width="300"
       src="https://github.com/yud0uhu/vue-blog/blob/master/frontend/src/assets/bg.png?raw=true"
-    ></v-img>
-    <v-img :src="article.image.url" style="width: 50%"></v-img>
-
-    <v-card-title>{{ article.title }}</v-card-title>
-
-    <v-card-text>
-      <div>{{article.contents]}</div>
-    </v-card-text>
+    >
+      <v-row align="center" justify="center">
+        <v-col class="text-center" cols="12">
+          <h1 class="text-h4 font-weight-thin mb-4">
+            {{ article.title }}
+          </h1>
+          <h4 class="subheading">
+            {{ article.summary }}
+          </h4>
+        </v-col>
+      </v-row>
+    </v-parallax>
+    <v-card class="mx-auto">
+      <v-card-text class="text--primary">
+        <div class="text-h6 font-weight-regular grey--text">
+          {{ article.updata }}
+        </div>
+        <div>
+          {{ article.contents }}
+        </div>
+      </v-card-text>
+    </v-card>
   </v-card>
 </template>
 

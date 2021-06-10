@@ -21,13 +21,22 @@
           <br />
           {{ year.comment }}
           <a v-bind="year">
-            <v-img
-              :src="`${year.src}`"
-              :lazy-src="`${year.src}`"
-              aspect-ratio="1"
-              max-height="150"
-              max-width="250"
-            ></v-img>
+            <v-hover v-slot="{ hover }"
+              ><v-card
+                :elevation="hover ? 12 : 2"
+                :class="{ 'on-hover': hover }"
+                width="250"
+                height="250"
+              >
+                <v-img
+                  :src="`${year.src}`"
+                  :lazy-src="`${year.src}`"
+                  aspect-ratio="1"
+                  max-height="150"
+                  max-width="250"
+                ></v-img>
+              </v-card>
+            </v-hover>
           </a>
         </div>
       </div>
@@ -101,7 +110,7 @@ export default {
         datail: "Chitose City × TAKEOUT FOOD Search (WEB版)",
         comment:
           "https://probable-point-1725.glideapp.io/" +
-          "のWeb版として共同制作しました。Topページを担当しています。",
+          "のWeb版として共同制作しました。Topページを担当しています。\nGithub:https://github.com/yud0uhu/gas-vue.js",
         href: "https://chitose-fts.web.app/",
         src:
           "https://firebasestorage.googleapis.com/v0/b/yukimi-pino.appspot.com/o/works_06.png?alt=media&token=6ad2ad11-15d8-4a43-992f-df64c4bf84c4",
@@ -149,7 +158,40 @@ export default {
         src:
           "https://firebasestorage.googleapis.com/v0/b/yukimi-pino.appspot.com/o/works_09.jpg?alt=media&token=e4160421-10ca-4128-8f67-935680e32635",
       },
+      {
+        color: "cyan",
+        year: "2021-02",
+        skill: "Unity",
+        datail: "2Dアクションゲーム",
+        comment:
+          "1週間で開発した2Dアクションゲームの試作品です。現在も共同開発で随時制作中です。",
+        href: "https://github.com/yud0uhu/Kari_Title",
+        src: "https://github.com/yud0uhu/Kari_Title",
+      },
+      {
+        color: "green",
+        year: "2021-03",
+        skill: "Python/Flask/heroku",
+        datail: "linebot",
+        comment:
+          "ヤフー主催のハッカソンOpenHackU2020 vol.4に参加し、チームで共同開発を行ったラインBotです。",
+        href: "https://github.com/yud0uhu/OpenHackU_vol_4_ID15",
+        src: "https://github.com/yud0uhu/OpenHackU_vol_4_ID15",
+      },
     ],
   }),
 };
 </script>
+<style scoped>
+.v-card {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.v-card:not(.on-hover) {
+  opacity: 0.6;
+}
+
+.show-btns {
+  color: rgba(255, 255, 255, 1) !important;
+}
+</style>
