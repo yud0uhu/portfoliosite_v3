@@ -46,6 +46,10 @@
 
 <script>
 export default {
+  metaInfo: {
+    title: "アバウト",
+    titleTemplate: "制作物の一覧ページです",
+  },
   data: () => ({
     years: [
       {

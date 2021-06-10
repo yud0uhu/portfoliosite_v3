@@ -46,7 +46,10 @@
 import axios from "axios";
 export default {
   name: "Home",
-
+  metaInfo: {
+    title: "ホーム",
+    titleTemplate: "トップページです",
+  },
   data: () => ({
     articles: [],
     transparent: "rgba(255, 255, 255, 0)",

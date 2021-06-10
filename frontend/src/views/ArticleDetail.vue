@@ -33,6 +33,10 @@ import axios from "axios";
 
 export default {
   name: "ArticleDetail",
+  metaInfo: {
+    title: "記事詳細",
+    titleTemplate: "記事詳細ページです",
+  },
 
   data: () => ({
     article: [],
