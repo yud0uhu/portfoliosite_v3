@@ -9,6 +9,7 @@ module.exports = {
           new PrerenderSPAPlugin({
             staticDir: path.join(__dirname, "dist"),
             routes: ["/", "/about", "/articles/:id"],
+            routes: ["/", "/works", "/works/:id"],
           }),
         ],
       };
