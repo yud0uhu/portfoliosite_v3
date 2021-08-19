@@ -11,11 +11,11 @@
         <div id="nav">
           <v-tabs>
             <v-tab>
-              <router-link to="/"><v-icon>mdi-note</v-icon></router-link>
+              <router-link to="/"><v-icon>mdi-home</v-icon></router-link>
             </v-tab>
             <v-tab
-              ><router-link to="/about"
-                ><v-icon>mdi-home</v-icon></router-link
+              ><router-link to="/works"
+                ><v-icon>mdi-space-invaders</v-icon></router-link
               ></v-tab
             >
             <v-tab
@@ -28,6 +28,7 @@
                 ><v-icon>mdi-github</v-icon></a
               ></v-tab
             >
+
           </v-tabs>
         </div>
       </v-app-bar>
