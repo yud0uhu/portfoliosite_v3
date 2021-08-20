@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Profile from "../views/Profile.vue";
 // const ArticleDetail = () => import("../views/ArticleDetail.vue");
+const Profile = () => import("../views/Profile.vue");
 
 Vue.use(VueRouter);
 
