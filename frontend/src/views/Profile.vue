@@ -22,7 +22,7 @@
         mb-5
         xs12
       >
-        <h2 class="headline font-weight-bold mb-3">0yu<br />@denham95173179</h2>
+        <h3 class="headline font-weight-bold mb-3">0yu<br />@denham95173179</h3>
       </v-flex>
 
       <v-flex
