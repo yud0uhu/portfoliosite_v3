@@ -11,21 +11,13 @@
         <div id="nav">
           <v-tabs>
             <v-tab>
-              <router-link to="/"><v-icon>mdi-home</v-icon></router-link>
-            </v-tab>
-            <v-tab
-              ><router-link to="/works"
-                ><v-icon>mdi-space-invaders</v-icon></router-link
+              <router-link to="/"
+                ><v-icon>mdi-home</v-icon>Profile</router-link
               ></v-tab
             >
             <v-tab
-              ><a href="https://twitter.com/denham95173179"
-                ><v-icon>mdi-twitter</v-icon></a
-              >
-            </v-tab>
-            <v-tab
-              ><a href="https://github.com/yud0uhu"
-                ><v-icon>mdi-github</v-icon></a
+              ><router-link to="/works"
+                ><v-icon>mdi-space-invaders</v-icon>Works</router-link
               ></v-tab
             >
 
