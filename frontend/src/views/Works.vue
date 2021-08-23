@@ -21,7 +21,8 @@
                 <div class="text-h6 font-weight-regular grey--text">
                   {{ work.productData }}
                 </div>
-                <a v-bind:href="work.productLink"><v-icon>mdi-github</v-icon></a>
+                <a v-bind:href="work.githubUrl"><v-icon v-show="work.githubUrl!=null">mdi-github</v-icon></a>
+                <a v-bind:href="work.productUrl"><v-icon v-show="work.productUrl!=null">mdi-vector-link</v-icon></a>
                 <div class="summary">{{ work.productComposition }}</div>
                 
               </v-card-text>
@@ -69,10 +70,12 @@ export default {
     title: "ホーム",
     titleTemplate: "トップページです",
   },
-  data: () => ({
-    works: [],
-    transparent: "rgba(255, 255, 255, 0)",
-  }),
+  data () {
+    return {
+      works: [],
+      transparent: "rgba(255, 255, 255, 0)",
+    }
+  },
 
   async mounted() {
     // 記事を取得する
